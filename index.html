@@ -4,20 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ventora Tech - We provide professional website, Android app, and desktop app development services." />
-  <meta name="keywords" content="Ventora Tech, web development, Android app development, desktop apps, IT solutions, tech company" />
+  <meta name="description"
+    content="Ventora Tech - We provide professional website, Android app, and desktop app development services." />
+  <meta name="keywords"
+    content="Ventora Tech, web development, Android app development, desktop apps, IT solutions, tech company" />
   <meta name="author" content="Ventora Tech" />
   <meta name="robots" content="index, follow" />
 
   <title>Ventora Tech</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <script src="js/script.js"></script>
 </head>
 
 <body>
   <header class="navbar">
     <div class="logo">
-      <img src="images/logoventora.png" alt="Ventora Tech Logo" />
+      <img src="images/logo.jpg" alt="Ventora Tech Logo" />
       <h1>Ventora Tech</h1>
     </div>
     <nav class="nav-links">
@@ -33,6 +36,112 @@
       <h2 class="animate-pop">Crafting Digital Excellence</h2>
       <p class="animate-fade">Web, Android & Desktop Development Services Tailored for You</p>
       <a href="#contact" class="cta-button animate-slide">Get in Touch</a>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-text animate-slide">
+        <h2 class="section-title">About Ventora Tech</h2>
+        <p>
+          At <strong>Ventora Tech</strong>, we specialize in building modern and scalable solutions across
+          <strong>websites</strong>, <strong>Android apps</strong>, and <strong>desktop software</strong>.
+          With a mission to empower businesses digitally, we blend creativity, code, and innovation to bring your ideas
+          to life.
+        </p>
+        <p>
+          Whether you're a startup or an enterprise, we provide tailor-made services with industry-best practices, fast
+          delivery, and solid support.
+          Your vision is our command—excluding Mac apps, we build everything else with precision and passion.
+        </p>
+      </div>
+      <div class="about-icons animate-fade">
+        <div class="about-feature">
+          <span>🚀</span>
+          <p>Fast & Scalable Solutions</p>
+        </div>
+        <div class="about-feature">
+          <span>💡</span>
+          <p>Creative & Modern Design</p>
+        </div>
+        <div class="about-feature">
+          <span>🤝</span>
+          <p>Client-First Approach</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Our Projects</h2>
+      <div class="project-cards">
+
+        <!-- Website Development Card -->
+        <div class="project-card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="icons/web.png" alt="Website Development" />
+              <h3>Website Development</h3>
+              <span class="click-hint">Click to View Projects</span>
+            </div>
+            <div class="card-back">
+              <div class="carousel">
+                <div class="carousel-track">
+                  <div class="carousel-item">
+                    <h4>Business Website</h4>
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    <p>A fully responsive business website built with HTML, CSS, JS and integrated with admin panel.</p>
+                  </div>
+                  <div class="carousel-item">
+                    <h4>E-commerce Website</h4>
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    <p>Online shopping platform with product pages, cart, and payment gateway integration.</p>
+                  </div>
+                </div>
+                <div class="carousel-controls">
+                  <button class="carousel-btn left" onclick="scrollProject(this, 'left')">&#10094;</button>
+                  <button class="carousel-btn right" onclick="scrollProject(this, 'right')">&#10095;</button>
+                </div>
+                <div class="dots"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Android Development Card -->
+        <div class="project-card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="icons/android.png" alt="Android App Development" />
+              <h3>Android App Development</h3>
+              <span class="click-hint">Click to View Projects</span>
+            </div>
+            <div class="card-back">
+              <div class="carousel">
+                <div class="carousel-track">
+                  <div class="carousel-item">
+                    <h4>Food Delivery App</h4>
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    <p>A Flutter-based app with live tracking, restaurant search, and Firebase backend.</p>
+                  </div>
+                  <div class="carousel-item">
+                    <h4>Health Tracker App</h4>
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    <p>Tracks steps, calories, and integrates with wearable devices. Built in Kotlin.</p>
+                  </div>
+                </div>
+                <div class="carousel-controls">
+                  <button class="carousel-btn left" onclick="scrollProject(this, 'left')">&#10094;</button>
+                  <button class="carousel-btn right" onclick="scrollProject(this, 'right')">&#10095;</button>
+                </div>
+                <div class="dots"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -69,51 +178,6 @@
     </div>
   </section>
 
-  <section class="pricing-section">
-    <div class="container">
-      <h2 class="section-title animate-slide">Our Packages</h2>
-      <div class="pricing-grid">
-
-        <div class="pricing-card animate-pop">
-          <h3>Starter</h3>
-          <p class="price">₹4,999</p>
-          <ul>
-            <li><span class="tick">✔</span> 1 Page Website or App</li>
-            <li><span class="tick">✔</span> Basic Responsive Design</li>
-            <li><span class="tick">✔</span> Delivery in 3 Days</li>
-            <li><span class="tick">✔</span> 1 Month Free Support</li>
-          </ul>
-          <button class="btn-custom">Choose Starter</button>
-        </div>
-
-        <div class="pricing-card featured animate-pop">
-          <h3>Professional</h3>
-          <p class="price">₹14,999</p>
-          <ul>
-            <li><span class="tick">✔</span> Website + Android App</li>
-            <li><span class="tick">✔</span> UI/UX Design Included</li>
-            <li><span class="tick">✔</span> Delivery in 7 Days</li>
-            <li><span class="tick">✔</span> 3 Months Free Support</li>
-          </ul>
-          <button class="btn-custom btn-featured">Choose Professional</button>
-        </div>
-
-        <div class="pricing-card animate-pop">
-          <h3>Enterprise</h3>
-          <p class="price">₹29,999+</p>
-          <ul>
-            <li><span class="tick">✔</span> Full Stack Solution</li>
-            <li><span class="tick">✔</span> Custom Features</li>
-            <li><span class="tick">✔</span> Fast Delivery & Scaling</li>
-            <li><span class="tick">✔</span> Priority Support</li>
-          </ul>
-          <button class="btn-custom">Choose Enterprise</button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <section class="contact-section" id="contact">
     <div class="container">
       <h2 class="section-title animate-slide">Get In Touch</h2>
@@ -122,9 +186,30 @@
         <form class="contact-form animate-fade">
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />
+
+          <!-- Purpose of Contact -->
+          <select required>
+            <option value="" disabled selected>Purpose of Contact</option>
+            <option value="web">Web Development</option>
+            <option value="app">App Development</option>
+            <option value="design">UI/UX Design</option>
+            <option value="consultation">Consultation</option>
+            <option value="other">Other</option>
+          </select>
+
+          <!-- Message -->
           <textarea rows="5" placeholder="Your Message" required></textarea>
+
+          <!-- Budget Slider -->
+          <label for="budget" style="margin-bottom: 10px;">What's Your Budget?</label>
+          <input type="range" id="budget" name="budget" min="100" max="10000" step="100"
+            oninput="budgetOutput.value = `₹${this.value}`" />
+          <output id="budgetOutput">₹1000</output>
+
+          <!-- Submit Button -->
           <button type="submit" class="btn-custom">Send Message</button>
         </form>
+
 
         <div class="contact-info animate-fade">
           <h3>Contact Details</h3>
