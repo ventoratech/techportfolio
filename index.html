@@ -184,12 +184,12 @@
       <h2 class="section-title animate-slide">Get In Touch</h2>
       <div class="contact-content">
 
-        <form class="contact-form animate-fade">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
+        <form action="https://formspree.io/f/mnnvjqpn" method="POST" class="contact-form animate-fade">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
 
           <!-- Purpose of Contact -->
-          <select required>
+          <select name="purpose" required>
             <option value="" disabled selected>Purpose of Contact</option>
             <option value="web">Web Development</option>
             <option value="app">App Development</option>
@@ -199,7 +199,7 @@
           </select>
 
           <!-- Message -->
-          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
           <!-- Budget Slider -->
           <label for="budget" style="margin-bottom: 10px;">What's Your Budget?</label>
@@ -207,10 +207,12 @@
             oninput="budgetOutput.value = `₹${this.value}`" />
           <output id="budgetOutput">₹1000</output>
 
+          <!-- Anti-spam hidden field -->
+          <input type="text" name="_gotcha" style="display:none">
+
           <!-- Submit Button -->
           <button type="submit" class="btn-custom">Send Message</button>
         </form>
-
 
         <div class="contact-info animate-fade">
           <p><strong>📧 Email:</strong></p>
