@@ -26,12 +26,13 @@
     <nav class="nav-links">
       <a href="#">Home</a>
       <a href="#services">Services</a>
-      <a href="#packages">Packages</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="hero-content">
       <h2 class="animate-pop">Crafting Digital Excellence</h2>
       <p class="animate-fade">Web, Android & Desktop Development Services Tailored for You</p>
@@ -145,7 +146,7 @@
     </div>
   </section>
 
-  <section class="services-section">
+  <section class="services-section" id="services">
     <div class="container">
       <h2 class="section-title animate-slide">Our Services</h2>
       <div class="services-grid">
@@ -202,7 +203,7 @@
 
           <!-- Budget Slider -->
           <label for="budget" style="margin-bottom: 10px;">What's Your Budget?</label>
-          <input type="range" id="budget" name="budget" min="100" max="10000" step="100"
+          <input type="range" id="budget" name="budget" min="100" max="100000" step="100"
             oninput="budgetOutput.value = `₹${this.value}`" />
           <output id="budgetOutput">₹1000</output>
 
@@ -212,7 +213,6 @@
 
 
         <div class="contact-info animate-fade">
-          <h3>Contact Details</h3>
           <p><strong>📧 Email:</strong></p>
           <p><a href="mailto:ventora.tech@gmail.com">ventora.tech@gmail.com</a></p>
         </div>
@@ -232,13 +232,13 @@
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Packages</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-contact">
         <h4>Reach Us</h4>
-        <p>📞 9648383818<br>📞 9653007175</p>
         <p>📧 <a href="mailto:ventora.tech@gmail.com">ventora.tech@gmail.com</a></p>
       </div>
     </div>
