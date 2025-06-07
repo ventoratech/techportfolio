@@ -41,3 +41,23 @@ window.addEventListener('load', () => {
     updateDots(track);
   });
 });
+
+
+function toggleMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const navbar = document.querySelector('.navbar');
+  
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+  navbar.classList.toggle('active');
+}
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      toggleMenu();
+    }
+  });
+});

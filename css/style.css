@@ -257,32 +257,28 @@ a:hover {
 /* Responsive */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
+    padding: 15px 20px;
   }
 
-  .hero{
-    margin-top: 200px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-    width: 100%;
+  .logo img {
+    height: 40px;
   }
 
   .hero h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .about-grid {
     flex-direction: column;
+  }
+  
+  .project-card {
+    width: 100%;
+    max-width: 350px;
   }
 }
 
@@ -699,4 +695,69 @@ a:hover {
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 25px 35px rgba(0, 180, 216, 0.2);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--dark);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  /* Hamburger animation when menu is open */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  /* Adjust logo position when menu is open */
+  .navbar.active .logo {
+    z-index: 1002;
+  }
 }
