@@ -619,6 +619,11 @@ a:hover {
   scroll-snap-align: center;
   padding: 10px;
   box-sizing: border-box;
+
+  /* Added scrollbar styles */
+  max-height: 380px; /* slightly less than card height to fit padding */
+  overflow-y: auto;
+  padding-right: 12px; /* space for scrollbar */
 }
 
 .carousel-item h4 {
@@ -696,6 +701,17 @@ a:hover {
   transform: translateY(-10px);
   box-shadow: 0 25px 35px rgba(0, 180, 216, 0.2);
 }
+
+/* Scrollbar styling for WebKit browsers */
+.carousel-item::-webkit-scrollbar {
+  width: 6px;
+}
+
+.carousel-item::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
 
 /* Hamburger Menu Styles */
 .hamburger {

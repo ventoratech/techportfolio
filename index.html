@@ -96,7 +96,10 @@
                 <div class="carousel-track">
                   <div class="carousel-item">
                     <h4>Business Website</h4>
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fX1TOXoYxR8" frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                    </iframe>
                     <p>A fully responsive business website built with HTML, CSS, JS and integrated with admin panel.</p>
                   </div>
                   <div class="carousel-item">
@@ -127,14 +130,23 @@
               <div class="carousel">
                 <div class="carousel-track">
                   <div class="carousel-item">
-                    <h4>Food Delivery App</h4>
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                    <p>A Flutter-based app with live tracking, restaurant search, and Firebase backend.</p>
+                    <h4>Examina Path Lab App</h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fX1TOXoYxR8" frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                    </iframe>
+                    <p>Examina Path Lab is a healthcare app built using Java in Android Studio.
+                      It lets users book lab tests, schedule home sample collection, and receive reports via WhatsApp.
+                      Users can also consult doctors through secure video calls.
+                      The app highlights my skills in Android development and healthcare integration.</p>
                   </div>
                   <div class="carousel-item">
-                    <h4>Health Tracker App</h4>
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                    <p>Tracks steps, calories, and integrates with wearable devices. Built in Kotlin.</p>
+                    <h4>Chat Bot App</h4>
+                    <iframe width="560" height="315" src="https://youtube.com/embed/u2caDHeLaEs" frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                    </iframe>
+                    <p>Built using Kotlin in Android Studio, this chatbot functions as a simple yet powerful personal assistant. What makes it unique is its trainability—you can teach the bot new responses and customize it according to your needs. Once trained, the chatbot provides information and answers based on your custom data, making it a versatile tool tailored to you. Ideal for quick, personalized assistance directly on your Android device.</p>
                   </div>
                 </div>
                 <div class="carousel-controls">
@@ -193,6 +205,9 @@
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
 
+          <input type="tel" name="mobile" placeholder="Your Mobile Number" pattern="[0-9]{10,15}" 
+         title="Please enter a valid mobile number" required />
+
           <!-- Purpose of Contact -->
           <select name="purpose" required>
             <option value="" disabled selected>Purpose of Contact</option>
@@ -208,7 +223,7 @@
 
           <!-- Budget Slider -->
           <label for="budget" style="margin-bottom: 10px;">What's Your Budget?</label>
-          <input type="range" id="budget" name="budget" min="100" max="100000" step="100"
+          <input type="range" id="budget" name="budget" min="10000" max="100000" step="100"
             oninput="budgetOutput.value = `₹${this.value}`" />
           <output id="budgetOutput">₹1000</output>
 
